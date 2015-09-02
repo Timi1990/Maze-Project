@@ -8,6 +8,7 @@ public class MyCompressorOutputStream extends OutputStream {
 	OutputStream out;
 	public MyCompressorOutputStream(OutputStream other) {
 		this.out=other;
+		
 	}
 	public void write(byte[] b)
 	{
