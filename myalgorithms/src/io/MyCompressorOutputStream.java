@@ -9,6 +9,10 @@ public class MyCompressorOutputStream extends OutputStream {
 	public MyCompressorOutputStream(OutputStream other) {
 		this.out=other;
 	}
+	public void write(byte[] b)
+	{
+		
+	}
 	@Override
 	public void write(int arg0) throws IOException {
 		// TODO Auto-generated method stub
