@@ -3,10 +3,11 @@ package algorithms.search;
 /**
  * Heuristic interface which contains a method for calculating paths,
  * depends on heuristic type
- * @author Artiom Petrov
  *
+ * @author Artiom Petrov
  */
-public interface Heuristic {
+public interface Heuristic
+{
 
-	double calcStartToGoalCost(State currentState,State goalState);
+    double calcStartToGoalCost(State currentState, State goalState);
 }
