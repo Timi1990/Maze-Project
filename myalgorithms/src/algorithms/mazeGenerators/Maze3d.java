@@ -157,38 +157,44 @@ public class Maze3d
         return array2d;
     }
 
-    public Integer[][] getCrossSectionByY(int row) throws IndexOutOfBoundsException
-    {
-        if (row >= getMaxRows() || row < 0)
-        {
-            throw new IndexOutOfBoundsException("Out of array bounds!");
-        }
-        Integer[][] array2d = new Integer[getDimension()][getMaxColumns()];
-        int i = 0;
-        while (i < getDimension())
-        {
-            for (int j = 0; j < getDimension(); j++)
-            {
-                System.arraycopy(maze[i][row], 0, array2d[j], 0, getMaxColumns());
-                i++;
-            }
-        }
-        return array2d;
-    }
+    public int[][] getCrossSectionByY(int row)throws IndexOutOfBoundsException 
+	{
+		if(row>=getMaxRows()||row<0)
+		{
+			throw new IndexOutOfBoundsException("Out of array bounds!");
+		}
+		int[][] array2d=new int[getDimension()][getMaxColumns()];
+		int i=0;
+		while(i<getDimension())
+		{
+			for(int j=0;j<getDimension();j++)
+			{
+				for(int k=0;k<getMaxColumns();k++)
+				{
+					array2d[j][k]=maze[i][row][k];
 
-    public Integer[][] getCrossSectionByZ(int dimension) throws IndexOutOfBoundsException
-    {
-        if (dimension >= getDimension() || dimension < 0)
-        {
-            throw new IndexOutOfBoundsException("Out of array bounds!");
-        }
-        Integer[][] array2d = new Integer[getMaxRows()][getMaxColumns()];
-        for (int i = 0; i < array2d.length; i++)
-        {
-            System.arraycopy(maze[dimension][i], 0, array2d[i], 0, array2d[i].length);
-        }
-        return array2d;
-    }
+				}
+				i++;
+			}
+		}
+		return array2d;
+	}
+	public int[][] getCrossSectionByZ(int dimension)throws IndexOutOfBoundsException 
+	{
+		if(dimension>=getDimension()||dimension<0)
+		{
+			throw new IndexOutOfBoundsException("Out of array bounds!");
+		}
+		int[][] array2d=new int[getMaxRows()][getMaxColumns()];
+		for(int i=0;i<array2d.length;i++)
+		{
+			for(int j=0;j<array2d[i].length;j++)
+			{
+				array2d[i][j]=maze[dimension][i][j];
+			}
+		}
+		return array2d;
+	}
 
     public byte[] toByteArray()
     {
