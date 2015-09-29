@@ -1,5 +1,6 @@
 package algorithms.search;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -9,7 +10,7 @@ import java.util.ArrayList;
  * @param ArrayList<State>,nodes evaluated
  * @author Artiom Petrov
  */
-public class Solution
+public class Solution implements Serializable
 {
 
     private ArrayList<State> sol;

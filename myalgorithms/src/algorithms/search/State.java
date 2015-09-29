@@ -1,11 +1,13 @@
 package algorithms.search;
 
+import java.io.Serializable;
+
 /**
  * General class which represents every searchable's states as "State" (String)
  *
  * @author Artiom Petrov
  */
-public class State
+public class State implements Serializable
 {
     private String state;
     private Double cost;

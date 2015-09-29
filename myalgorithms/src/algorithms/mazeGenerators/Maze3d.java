@@ -1,13 +1,15 @@
 package algorithms.mazeGenerators;
 
+import java.io.Serializable;
 import java.nio.ByteBuffer;
+import java.util.Arrays;
 import java.util.Stack;
 
 //Maze 3d object class
 //Includes the 3d array 
 //Also includes getCrossBy and getPossibleMoves methods
 
-public class Maze3d
+public class Maze3d implements Serializable
 {
     private int maze[][][];
     private Position startPosition;
@@ -20,6 +22,7 @@ public class Maze3d
         this.startPosition = start;
         this.exitPosition = goal;
     }
+    public void yoav(){};
 
     public void setMazeBounds(int Dimension, int maxRows, int maxColumns)
     {
@@ -249,5 +252,33 @@ public class Maze3d
     private enum Move
     {
         Left, Right, Back, Forward, Up, Down
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Maze3d maze3d = (Maze3d) o;
+
+        if (maxRows != maze3d.maxRows) return false;
+        if (maxColumns != maze3d.maxColumns) return false;
+        if (Dimension != maze3d.Dimension) return false;
+        if (!Arrays.deepEquals(maze, maze3d.maze)) return false;
+        if (startPosition != null ? !startPosition.equals(maze3d.startPosition) : maze3d.startPosition != null)
+            return false;
+        return !(exitPosition != null ? !exitPosition.equals(maze3d.exitPosition) : maze3d.exitPosition != null);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = maze != null ? Arrays.deepHashCode(maze) : 0;
+        result = 31 * result + (startPosition != null ? startPosition.hashCode() : 0);
+        result = 31 * result + (exitPosition != null ? exitPosition.hashCode() : 0);
+        result = 31 * result + maxRows;
+        result = 31 * result + maxColumns;
+        result = 31 * result + Dimension;
+        return result;
     }
 }

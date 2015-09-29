@@ -1,5 +1,6 @@
 package algorithms.demo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import algorithms.mazeGenerators.Maze3d;
@@ -14,7 +15,7 @@ import algorithms.search.State;
  * @author Artiom Petrov
  * @see Searchable
  */
-public class Maze3dDomain implements Searchable
+public class Maze3dDomain implements Searchable,Serializable
 {
 
     Maze3d maze;

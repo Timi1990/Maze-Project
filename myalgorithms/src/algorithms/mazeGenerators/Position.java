@@ -3,7 +3,9 @@ package algorithms.mazeGenerators;
 
 //Position class,which holds (z,y,x) coordinates
 
-public class Position
+import java.io.Serializable;
+
+public class Position implements Serializable
 {
     private int x, y, z;
 
@@ -85,4 +87,24 @@ public class Position
         return String.format("{%d,%d,%d}", getZ(), getY(), getX());
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Position position = (Position) o;
+
+        if (x != position.x) return false;
+        if (y != position.y) return false;
+        return z == position.z;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = x;
+        result = 31 * result + y;
+        result = 31 * result + z;
+        return result;
+    }
 }

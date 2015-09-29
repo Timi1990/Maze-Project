@@ -1,5 +1,6 @@
 package algorithms.search;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
@@ -9,7 +10,7 @@ import java.util.PriorityQueue;
  *
  * @author Artiom Petrov
  */
-public abstract class CommonSearcher implements Searcher
+public abstract class CommonSearcher implements Searcher,Serializable
 {
 
 

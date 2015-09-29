@@ -3,6 +3,8 @@ package algorithms.demo;
 import algorithms.mazeGenerators.Position;
 import algorithms.search.State;
 
+import java.io.Serializable;
+
 /**
  * Converts general state to Maze3d position.
  * Also in charge of setting and changing the cost from position to position
@@ -10,7 +12,7 @@ import algorithms.search.State;
  * @author Artiom Petrov
  * @see State
  */
-public class Maze3dState extends State
+public class Maze3dState extends State implements Serializable
 {
 
     private Position position;

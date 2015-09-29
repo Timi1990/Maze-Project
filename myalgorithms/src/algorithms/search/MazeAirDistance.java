@@ -2,13 +2,15 @@ package algorithms.search;
 
 import algorithms.demo.Maze3dState;
 
+import java.io.Serializable;
+
 /**
  * Air Distance measuring: sums all paths from the current state to the goal state
  * in 2nd power, and then uses sqrt method on the result
  *
  * @author Artiom Petrov
  */
-public class MazeAirDistance extends HeuristicMaze
+public class MazeAirDistance extends HeuristicMaze implements Serializable
 {
 
     @Override

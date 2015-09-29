@@ -2,13 +2,15 @@ package algorithms.search;
 
 import algorithms.demo.Maze3dState;
 
+import java.io.Serializable;
+
 /**
  * Manhattan distance: calculates the absolute value of the path
  * available from the current state till the goal state.
  *
  * @author Artiom Petrov
  */
-public class MazeManhattanDistance extends HeuristicMaze
+public class MazeManhattanDistance extends HeuristicMaze implements Serializable
 {
 
     @Override
