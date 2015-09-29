@@ -136,13 +136,13 @@ public class Maze3d implements Serializable
         return Moves.toArray(new String[Moves.size()]);
     }
 
-    public Integer[][] getCrossSectionByX(int column) throws IndexOutOfBoundsException
+    public int[][] getCrossSectionByX(int column) throws IndexOutOfBoundsException
     {
         if (column >= getMaxColumns() || column < 0)
         {
             throw new IndexOutOfBoundsException("Out of array bounds!");
         }
-        Integer[][] array2d = new Integer[getDimension()][getMaxRows()];
+        int[][] array2d = new int[getDimension()][getMaxRows()];
         int i = 0;
         while (i < getDimension())
         {
