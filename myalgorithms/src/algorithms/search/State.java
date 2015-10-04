@@ -21,7 +21,7 @@ public class State implements Serializable
     public State(String state)
     {
         this.state = state;
-        this.cost = (double) 0;
+        this.cost = 0.0;
     }
 
     //Copy C'tor

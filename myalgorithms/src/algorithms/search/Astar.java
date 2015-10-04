@@ -32,7 +32,6 @@ public class Astar extends CommonSearcher
     @Override
     public Solution search(Searchable s)
     {
-
         openList.add(s.getStartState());
         while (!openList.isEmpty())
         {

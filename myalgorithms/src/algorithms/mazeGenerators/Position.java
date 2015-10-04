@@ -16,7 +16,7 @@ public class Position implements Serializable
         this.z = 0;
     }
 
-    Position(int dimension, int rows, int columns)
+    public Position(int dimension, int rows, int columns)
     {
         z = dimension;
         y = rows;
@@ -88,20 +88,28 @@ public class Position implements Serializable
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object o)
+    {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
 
         Position position = (Position) o;
 
-        if (x != position.x) return false;
-        if (y != position.y) return false;
-        return z == position.z;
+        if (x != position.x)
+            return false;
+        if (y != position.y)
+            return false;
+        if (z != position.z)
+            return false;
 
+        return true;
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         int result = x;
         result = 31 * result + y;
         result = 31 * result + z;

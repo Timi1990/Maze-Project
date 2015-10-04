@@ -12,7 +12,6 @@ import java.util.ArrayList;
  */
 public class Solution implements Serializable
 {
-
     private ArrayList<State> sol;
     private int nodes;
 
