@@ -24,14 +24,6 @@ public class State implements Serializable
         this.cost = 0.0;
     }
 
-    //Copy C'tor
-    public State(State other)
-    {
-        this.state = other.getState();
-        this.cost = other.getCost();
-        this.cameFrom = other.getCameFrom();
-    }
-
     public void setState(String state)
     {
         this.state = state;
@@ -60,6 +52,7 @@ public class State implements Serializable
     /**
      * Overrides object's equal method, compared by Strings
      */
+    @Override
     public boolean equals(Object obj)
     {
         return state.equals(((State) obj).getState());

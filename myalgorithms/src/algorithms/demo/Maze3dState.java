@@ -14,9 +14,7 @@ import java.io.Serializable;
  */
 public class Maze3dState extends State implements Serializable
 {
-
     private Position position;
-
 
     public Maze3dState(Position position)
     {
@@ -27,7 +25,7 @@ public class Maze3dState extends State implements Serializable
     public Maze3dState(Maze3dState maze3dState)
     {
         super(maze3dState.getPosition().toString());
-        super.setCost(maze3dState.getCost());
+        setCost(maze3dState.getCost());
         this.position = maze3dState.getPosition();
 
     }

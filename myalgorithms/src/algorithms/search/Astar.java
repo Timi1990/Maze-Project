@@ -14,8 +14,7 @@ import java.util.ArrayList;
 
 public class Astar extends CommonSearcher
 {
-
-    Heuristic h;
+    private final Heuristic h;
 
     public Astar(Heuristic h)
     {

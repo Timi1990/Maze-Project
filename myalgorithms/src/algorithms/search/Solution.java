@@ -20,7 +20,7 @@ public class Solution implements Serializable
         sol = new ArrayList<State>();
         this.nodes = 0;
     }
-    
+
     public ArrayList<State> getSolutionList()
     {
     	return sol;

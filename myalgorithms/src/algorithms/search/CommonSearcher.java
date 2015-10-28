@@ -12,8 +12,6 @@ import java.util.PriorityQueue;
  */
 public abstract class CommonSearcher implements Searcher,Serializable
 {
-
-
     protected PriorityQueue<State> openList;
     private int evaluatedNodes;
     private static double evaluatedPath;
@@ -23,6 +21,14 @@ public abstract class CommonSearcher implements Searcher,Serializable
     {
         openList = new PriorityQueue<State>(new SortQueueViaCost());  //Prioritizing by cost
         closedList = new ArrayList<State>();
+        evaluatedPath = 0;
+        evaluatedNodes = 0;
+    }
+
+    public void clean()
+    {
+        openList.clear();
+        closedList.clear();
         evaluatedPath = 0;
         evaluatedNodes = 0;
     }

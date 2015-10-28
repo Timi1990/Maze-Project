@@ -12,5 +12,7 @@ public interface Searcher
 {
     Solution search(Searchable s);
 
+    void clean();
+
     int getNumOfNodes();
 }

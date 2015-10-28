@@ -34,8 +34,6 @@ public class Stammain
         {
             e.printStackTrace();
         }
-
-
     }
 
 }

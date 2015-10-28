@@ -1,12 +1,12 @@
 package algorithms.demo;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-
 import algorithms.mazeGenerators.Maze3d;
 import algorithms.mazeGenerators.Position;
 import algorithms.search.Searchable;
 import algorithms.search.State;
+
+import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * This class serves as Object Adapter, which converts maze3d objects,
@@ -17,16 +17,20 @@ import algorithms.search.State;
  */
 public class Maze3dDomain implements Searchable,Serializable
 {
-
-    Maze3d maze;
-    Maze3dState startState;
-    Maze3dState goalState;
+    private final Maze3d maze;
+    private Maze3dState startState;
+    private Maze3dState goalState;
 
     public Maze3dDomain(Maze3d maze)
     {
         this.maze = maze;
         startState = new Maze3dState(maze.getStartPosition());
         goalState = new Maze3dState(maze.getExitPosition());
+    }
+
+    public void setStartState(Position startState)
+    {
+        this.startState = new Maze3dState(startState);
     }
 
     @Override
