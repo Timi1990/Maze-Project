@@ -1,5 +1,6 @@
 package algorithms.mazeGenerators;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -9,7 +10,7 @@ import java.util.Collections;
 //(2) A method which returns shuffled array of possible moves (the moves are explained in method body)
 //(3) A boolean method, which checks whether a current position is the starting point or not
 
-public class MyMaze3dGenerator extends Maze3dGeneratorBase
+public class MyMaze3dGenerator extends Maze3dGeneratorBase implements Serializable
 {
 
 

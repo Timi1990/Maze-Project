@@ -1,5 +1,6 @@
 package algorithms.search;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -12,7 +13,7 @@ import java.util.ArrayList;
  * @see Heuristic
  */
 
-public class Astar extends CommonSearcher
+public class Astar extends CommonSearcher implements Serializable
 {
     private final Heuristic h;
 

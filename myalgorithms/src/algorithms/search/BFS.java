@@ -1,12 +1,13 @@
 package algorithms.search;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Best First Search algorithm implementation, for solving different Searchable objects
  * by finding the "cheapest" path via searchable's states.
  */
-public class BFS extends CommonSearcher
+public class BFS extends CommonSearcher implements Serializable
 {
 
 

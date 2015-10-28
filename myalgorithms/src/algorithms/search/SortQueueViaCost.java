@@ -1,5 +1,6 @@
 package algorithms.search;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
 /**
@@ -7,7 +8,7 @@ import java.util.Comparator;
  *
  * @author Artiom Petrov
  */
-public class SortQueueViaCost implements Comparator<State>
+public class SortQueueViaCost implements Comparator<State>,Serializable
 {
 
     @Override
