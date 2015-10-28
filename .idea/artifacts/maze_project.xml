@@ -3,6 +3,7 @@
     <output-path>$PROJECT_DIR$/out</output-path>
     <root id="archive" name="maze-project.jar">
       <element id="module-output" name="Maze-Project" />
+      <element id="dir-copy" path="$PROJECT_DIR$/myalgorithms/src" />
     </root>
   </artifact>
 </component>
